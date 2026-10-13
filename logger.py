@@ -1,7 +1,11 @@
 from loguru import logger
+from pathlib import Path
+
+# Создаём папку log, если её нет
+Path("log").mkdir(exist_ok=True)
 
 logger.add(
-    "calculator.log",
+    "log/calculator.log",
     rotation="1 MB",
     level="DEBUG"
 )
