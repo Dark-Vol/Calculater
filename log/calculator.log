@@ -1,0 +1,21 @@
+2026-10-13 12:31:41.612 | INFO     | logger:<module>:10 - Application started
+2026-10-13 12:31:41.613 | SUCCESS  | logger:<module>:11 - Data loaded successfully
+2026-10-13 12:31:41.613 | WARNING  | logger:<module>:12 - Memory usege in heigh
+2026-10-13 12:31:41.614 | ERROR    | logger:<module>:13 - Application started
+2026-10-13 12:31:41.614 | DEBUG    | logger:<module>:14 - That's it, beautiful and simple logging!
+2026-10-13 12:31:41.614 | INFO     | __main__:<module>:4 - Calculator started
+2026-10-13 12:32:16.028 | INFO     | logger:<module>:10 - Application started
+2026-10-13 12:32:16.029 | SUCCESS  | logger:<module>:11 - Data loaded successfully
+2026-10-13 12:32:16.029 | WARNING  | logger:<module>:12 - Memory usege in heigh
+2026-10-13 12:32:16.030 | ERROR    | logger:<module>:13 - Application started
+2026-10-13 12:32:16.030 | DEBUG    | logger:<module>:14 - That's it, beautiful and simple logging!
+2026-10-13 12:32:16.030 | INFO     | __main__:<module>:4 - Calculator started
+2026-10-13 12:32:24.727 | DEBUG    | __main__:<module>:13 - Input: 1.0 ** 3.14
+2026-10-13 12:32:24.727 | SUCCESS  | __main__:<module>:39 - Result: 1.0
+2026-10-13 12:32:24.728 | INFO     | __main__:<module>:46 - Calculator finished
+2026-10-13 12:33:21.308 | INFO     | logger:<module>:10 - Application started
+2026-10-13 12:33:21.308 | SUCCESS  | logger:<module>:11 - Data loaded successfully
+2026-10-13 12:33:21.308 | WARNING  | logger:<module>:12 - Memory usege in heigh
+2026-10-13 12:33:21.308 | ERROR    | logger:<module>:13 - Application started
+2026-10-13 12:33:21.308 | DEBUG    | logger:<module>:14 - That's it, beautiful and simple logging!
+2026-10-13 12:33:21.309 | INFO     | __main__:<module>:4 - Calculator started
