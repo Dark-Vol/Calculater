@@ -11,8 +11,18 @@ logger.add(
 )
 
 
+
+# Logs an informational message when the application starts
 logger.info("Application started")
+
+# Logs a success message when data has been loaded successfully
 logger.success("Data loaded successfully")
-logger.warning("Memory usege in heigh")
-logger.error("Application started")
+
+# Logs a warning when memory usage is high
+logger.warning("Memory usage is high")
+
+# Logs an error message when an error occurs
+logger.error("An error occurred")
+
+# Logs a debug message, usually used for troubleshooting and development
 logger.debug("That's it, beautiful and simple logging!")
