@@ -1,94 +1,59 @@
-from imports import math
 from logger import logger
 
 logger.info("Calculator started")
-operations = ["+", "-", "*", "/", "//", "**", "%"]
+OPERATIONS = ["+", "-", "*", "/", "//", "**", "%"]
 
-try:
-    # Enter first number
-    first_num = float(input("Enter first: "))
-    
-    # Enter operation from operations
-    operation = input("Enter operation: ")
-    
-    # Enter second number
-    second_num = float(input("Enter second: "))
 
-    # Logs the first number, arithmetic operator, and second number entered by the user
+def parse_expression(expression):
+    """Split a two-operand expression like '12+3' or '-2**4' into parts."""
+    text = str(expression).replace(" ", "").replace("(", "").replace(")", "")
+    operators = ["**", "//", "%", "*", "/", "+", "-"]
+    start = 1 if text.startswith("-") else 0
+    i = start
+    while i < len(text):
+        for op in operators:
+            if text.startswith(op, i):
+                left = text[:i]
+                right = text[i + len(op) :]
+                if left == "" or right == "":
+                    raise ValueError("Incomplete expression")
+                return float(left), op, float(right)
+        i += 1
+    raise ValueError("No operation found")
+
+
+def calculate(first_num, operation, second_num):
+    """Perform one arithmetic operation and return the result."""
     logger.debug(f"Input: {first_num} {operation} {second_num}")
 
-    
-    # Check whether the entered operator is supported
-    if operation not in operations:
-        # Log a warning if the operator is unknown
+    if operation not in OPERATIONS:
         logger.warning(f"Unknown operation: {operation}")
-        print("Unknown operation")
+        raise ValueError("Unknown operation")
 
-    # Check whether the user is trying to divide by zero
-    elif operation in ["/", "//", "%"] and second_num == 0:
-        # Log an error because division by zero is not allowed
+    if operation in ["/", "//", "%"] and second_num == 0:
         logger.error("Division by zero")
-        print("Error: division by zero!")
+        raise ZeroDivisionError("Division by zero")
 
-    else:
-        # Perform addition
-        if operation == "+":
-            result = first_num + second_num
+    if operation == "+":
+        result = first_num + second_num
+    elif operation == "-":
+        result = first_num - second_num
+    elif operation == "*":
+        result = first_num * second_num
+    elif operation == "/":
+        result = first_num / second_num
+    elif operation == "//":
+        result = first_num // second_num
+    elif operation == "**":
+        result = first_num ** second_num
+    elif operation == "%":
+        result = first_num % second_num
 
-        # Perform subtraction
-        elif operation == "-":
-            result = first_num - second_num
+    logger.success(f"Result: {result}")
+    return result
 
 
-        # Perform multiplication
-        elif operation == "*":
-            result = first_num * second_num
+if __name__ == "__main__":
+    from gui import run
 
-            if result - math.floor(result) < 0.5:
-                rounded_result = math.floor(result)
-                print("Rounded result:", rounded_result)
-            elif result - math.floor(result) > 0.5:
-                print("Result:", result)
-            else:
-                rounded_result = math.ceil(result)
-                print("Rounded result:", rounded_result)
-            # print("Result:", result)
-
-        # Perform division
-        elif operation == "/":
-            result = first_num / second_num
-
-            if result - math.floor(result) < 0.5:
-                rounded_result = math.floor(result)
-                print("Rounded result:", rounded_result)
-            elif result - math.floor(result) > 0.5:
-                print("Result:", result)
-            else:
-                rounded_result = math.ceil(result)
-                print("Rounded result:", rounded_result)
-
-            # print("Result:", result)
-
-        # Perform floor division (round down to an integer quotient)
-        elif operation == "//":
-            result = first_num // second_num
-
-        # Raise the first number to the power of the second number
-        elif operation == "**":
-            result = first_num ** second_num
-
-        # Calculate the remainder after division
-        elif operation == "%":
-            result = first_num % second_num
-
-        # Log the successful calculation and its result
-        logger.success(f"Result: {result}")
-        print("Result:", result)
-
-# Handle invalid number input, such as entering letters instead of numbers
-except ValueError:
-    logger.exception("Invalid number entered")
-    print("Error: please enter valid numbers")
-
-    # Log a message when the calculator finishes running
-    logger.info("Calculator finished")
+    run()
