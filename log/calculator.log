@@ -120,3 +120,13 @@
 2026-10-15 15:31:45.748 | SUCCESS  | main:calculate:52 - Result: 8
 2026-10-15 15:31:45.749 | DEBUG    | main:calculate:27 - Input: 10 % 3
 2026-10-15 15:31:45.750 | SUCCESS  | main:calculate:52 - Result: 1
+2026-10-15 15:34:22.903 | INFO     | logger:<module>:16 - Application started
+2026-10-15 15:34:22.903 | SUCCESS  | logger:<module>:19 - Data loaded successfully
+2026-10-15 15:34:22.904 | WARNING  | logger:<module>:22 - Memory usage is high
+2026-10-15 15:34:22.904 | ERROR    | logger:<module>:25 - An error occurred
+2026-10-15 15:34:22.904 | DEBUG    | logger:<module>:28 - That's it, beautiful and simple logging!
+2026-10-15 15:34:22.904 | INFO     | main:<module>:3 - Calculator started
+2026-10-15 15:34:29.350 | DEBUG    | main:calculate:27 - Input: 1.0 + 2.0
+2026-10-15 15:34:29.351 | SUCCESS  | main:calculate:52 - Result: 3.0
+2026-10-15 15:35:41.682 | DEBUG    | main:calculate:27 - Input: 2.0 * 2.2
+2026-10-15 15:35:41.683 | SUCCESS  | main:calculate:52 - Result: 4.4
