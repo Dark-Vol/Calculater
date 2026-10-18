@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from main import calculate, parse_expression
+from main import calculate, parse_expression, round_multiply_divide_result
 
 
 def run():
@@ -8,14 +8,22 @@ def run():
     root.title("Calculator")
     root.geometry("450x450")
 
-    entry = tk.Entry(root, font=("Times New Roman", 20), justify="right")
-    entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10, sticky="ew")
+    tk.Label(root, text="Result", font=("Arial", 10)).grid(row=0, column=0, columnspan=2)
+    tk.Label(root, text="Rounded", font=("Arial", 10)).grid(row=0, column=2, columnspan=2)
+
+    entry = tk.Entry(root, font=("Times New Roman", 18), justify="right")
+    entry.grid(row=1, column=0, columnspan=2, padx=6, pady=6, sticky="ew")
+
+    rounded_entry = tk.Entry(root, font=("Times New Roman", 18), justify="right")
+    rounded_entry.grid(row=1, column=2, columnspan=2, padx=6, pady=6, sticky="ew")
 
     def add_number(value):
+        rounded_entry.delete(0, tk.END)
         entry.insert(tk.END, value)
 
     def clear():
         entry.delete(0, tk.END)
+        rounded_entry.delete(0, tk.END)
 
     def add_parentheses():
         text = entry.get()
@@ -35,12 +43,18 @@ def run():
             first_num, operation, second_num = parse_expression(expression)
             result = calculate(first_num, operation, second_num)
             entry.delete(0, tk.END)
+            rounded_entry.delete(0, tk.END)
             entry.insert(0, format_result(result))
+            if operation in ("*", "/"):
+                rounded_result = round_multiply_divide_result(result)
+                rounded_entry.insert(0, format_result(rounded_result))
         except ZeroDivisionError:
             entry.delete(0, tk.END)
+            rounded_entry.delete(0, tk.END)
             entry.insert(0, "Error: division by zero")
         except ValueError:
             entry.delete(0, tk.END)
+            rounded_entry.delete(0, tk.END)
             entry.insert(0, "Error")
 
     buttons = [
@@ -51,7 +65,7 @@ def run():
         ["()", "0", ".", "="],
     ]
 
-    for row_index, row in enumerate(buttons, start=1):
+    for row_index, row in enumerate(buttons, start=2):
         for col_index, value in enumerate(row):
             if value == "C":
                 command = clear
