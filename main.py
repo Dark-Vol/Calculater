@@ -1,7 +1,18 @@
+from imports import math
 from logger import logger
 
 logger.info("Calculator started")
 OPERATIONS = ["+", "-", "*", "/", "//", "**", "%"]
+
+
+def round_multiply_divide_result(result):
+    if result - math.floor(result) < 0.5:
+        rounded_result = math.floor(result)
+    elif result - math.floor(result) > 0.5:
+        rounded_result = result
+    else:
+        rounded_result = math.ceil(result)
+    return rounded_result
 
 
 def parse_expression(expression):
@@ -40,8 +51,14 @@ def calculate(first_num, operation, second_num):
         result = first_num - second_num
     elif operation == "*":
         result = first_num * second_num
+        rounded_result = round_multiply_divide_result(result)
+        print("Result:", result)
+        print("Rounded result:", rounded_result)
     elif operation == "/":
         result = first_num / second_num
+        rounded_result = round_multiply_divide_result(result)
+        print("Result:", result)
+        print("Rounded result:", rounded_result)
     elif operation == "//":
         result = first_num // second_num
     elif operation == "**":
