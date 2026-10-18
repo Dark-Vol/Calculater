@@ -130,3 +130,59 @@
 2026-10-15 15:34:29.351 | SUCCESS  | main:calculate:52 - Result: 3.0
 2026-10-15 15:35:41.682 | DEBUG    | main:calculate:27 - Input: 2.0 * 2.2
 2026-10-15 15:35:41.683 | SUCCESS  | main:calculate:52 - Result: 4.4
+2026-10-15 15:39:44.392 | INFO     | logger:<module>:16 - Application started
+2026-10-15 15:39:44.392 | SUCCESS  | logger:<module>:19 - Data loaded successfully
+2026-10-15 15:39:44.392 | WARNING  | logger:<module>:22 - Memory usage is high
+2026-10-15 15:39:44.392 | ERROR    | logger:<module>:25 - An error occurred
+2026-10-15 15:39:44.392 | DEBUG    | logger:<module>:28 - That's it, beautiful and simple logging!
+2026-10-15 15:39:44.392 | INFO     | main:<module>:4 - Calculator started
+2026-10-15 15:39:44.394 | DEBUG    | main:calculate:42 - Input: 1 + 2
+2026-10-15 15:39:44.395 | SUCCESS  | main:calculate:67 - Result: 3
+2026-10-15 15:39:44.395 | DEBUG    | main:calculate:42 - Input: 5 - 2
+2026-10-15 15:39:44.395 | SUCCESS  | main:calculate:67 - Result: 3
+2026-10-15 15:39:44.396 | DEBUG    | main:calculate:42 - Input: 3 * 4
+2026-10-15 15:39:44.396 | SUCCESS  | main:calculate:67 - Result: 12
+2026-10-15 15:39:44.397 | DEBUG    | main:calculate:42 - Input: 10 / 2
+2026-10-15 15:39:44.397 | SUCCESS  | main:calculate:67 - Result: 5
+2026-10-15 15:39:44.398 | DEBUG    | main:calculate:42 - Input: 2 ** 3
+2026-10-15 15:39:44.398 | SUCCESS  | main:calculate:67 - Result: 8
+2026-10-15 15:39:44.398 | DEBUG    | main:calculate:42 - Input: 10 % 3
+2026-10-15 15:39:44.398 | SUCCESS  | main:calculate:67 - Result: 1
+2026-10-15 15:40:11.491 | INFO     | logger:<module>:16 - Application started
+2026-10-15 15:40:11.491 | SUCCESS  | logger:<module>:19 - Data loaded successfully
+2026-10-15 15:40:11.491 | WARNING  | logger:<module>:22 - Memory usage is high
+2026-10-15 15:40:11.491 | ERROR    | logger:<module>:25 - An error occurred
+2026-10-15 15:40:11.491 | DEBUG    | logger:<module>:28 - That's it, beautiful and simple logging!
+2026-10-15 15:40:11.492 | INFO     | __main__:<module>:4 - Calculator started
+2026-10-15 15:40:11.502 | INFO     | main:<module>:4 - Calculator started
+2026-10-15 15:40:18.649 | DEBUG    | main:calculate:42 - Input: 2.0 * 2.2
+2026-10-15 15:40:18.650 | SUCCESS  | main:calculate:67 - Result: 4
+2026-10-15 15:40:36.145 | DEBUG    | main:calculate:42 - Input: 2.0 * 2.25
+2026-10-15 15:40:36.146 | SUCCESS  | main:calculate:67 - Result: 5
+2026-10-15 15:43:53.130 | INFO     | logger:<module>:16 - Application started
+2026-10-15 15:43:53.130 | SUCCESS  | logger:<module>:19 - Data loaded successfully
+2026-10-15 15:43:53.130 | WARNING  | logger:<module>:22 - Memory usage is high
+2026-10-15 15:43:53.130 | ERROR    | logger:<module>:25 - An error occurred
+2026-10-15 15:43:53.131 | DEBUG    | logger:<module>:28 - That's it, beautiful and simple logging!
+2026-10-15 15:43:53.131 | INFO     | main:<module>:4 - Calculator started
+2026-10-15 15:43:53.133 | DEBUG    | main:calculate:38 - Input: 1 + 2
+2026-10-15 15:43:53.133 | SUCCESS  | main:calculate:69 - Result: 3
+2026-10-15 15:43:53.133 | DEBUG    | main:calculate:38 - Input: 5 - 2
+2026-10-15 15:43:53.133 | SUCCESS  | main:calculate:69 - Result: 3
+2026-10-15 15:43:53.134 | DEBUG    | main:calculate:38 - Input: 3 * 4
+2026-10-15 15:43:53.134 | SUCCESS  | main:calculate:69 - Result: 12
+2026-10-15 15:43:53.135 | DEBUG    | main:calculate:38 - Input: 10 / 2
+2026-10-15 15:43:53.135 | SUCCESS  | main:calculate:69 - Result: 5.0
+2026-10-15 15:43:53.136 | DEBUG    | main:calculate:38 - Input: 2 ** 3
+2026-10-15 15:43:53.137 | SUCCESS  | main:calculate:69 - Result: 8
+2026-10-15 15:43:53.137 | DEBUG    | main:calculate:38 - Input: 10 % 3
+2026-10-15 15:43:53.137 | SUCCESS  | main:calculate:69 - Result: 1
+2026-10-15 15:49:58.293 | INFO     | logger:<module>:16 - Application started
+2026-10-15 15:49:58.293 | SUCCESS  | logger:<module>:19 - Data loaded successfully
+2026-10-15 15:49:58.293 | WARNING  | logger:<module>:22 - Memory usage is high
+2026-10-15 15:49:58.293 | ERROR    | logger:<module>:25 - An error occurred
+2026-10-15 15:49:58.293 | DEBUG    | logger:<module>:28 - That's it, beautiful and simple logging!
+2026-10-15 15:49:58.294 | INFO     | __main__:<module>:4 - Calculator started
+2026-10-15 15:49:58.305 | INFO     | main:<module>:4 - Calculator started
+2026-10-15 15:50:07.942 | DEBUG    | main:calculate:38 - Input: 2.0 * 2.2
+2026-10-15 15:50:07.943 | SUCCESS  | main:calculate:69 - Result: 4.4
