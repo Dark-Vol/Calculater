@@ -12,4 +12,7 @@ import numpy # работа с многомерными массивами и б
 import pymunk # 2D-физический движок 
 
 # Физика
-import qiskit 
+import qiskit
+
+# Testing
+import pytest
